@@ -1,0 +1,247 @@
+NetworkingDataLog Information: 1 : [00000001] 2022-09-26T16:50:43.844Z ipconfig.exe /all
+ stdout = Windows IP Configuration
+   Host Name . . . . . . . . . . . . : gagagava
+   Primary Dns Suffix  . . . . . . . : 
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : fwzpeqpsnjaeflttblraem5fqb.phxx.internal.cloudapp.net
+Ethernet adapter Ethernet:
+   Connection-specific DNS Suffix  . : fwzpeqpsnjaeflttblraem5fqb.phxx.internal.cloudapp.net
+   Description . . . . . . . . . . . : Microsoft Hyper-V Network Adapter
+   Physical Address. . . . . . . . . : 60-45-BD-C7-7E-B3
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::4c5d:3dc0:23f4:23ff%5(Preferred) 
+   IPv4 Address. . . . . . . . . . . : 10.0.0.4(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Monday, September 26, 2022 4:48:01 PM
+   Lease Expires . . . . . . . . . . : Thursday, November 2, 2158 11:18:58 PM
+   Default Gateway . . . . . . . . . : 10.0.0.1
+   DHCP Server . . . . . . . . . . . : 168.63.129.16
+   DHCPv6 IAID . . . . . . . . . . . : 106972605
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-2A-C3-1D-6F-60-45-BD-C7-7E-B3
+   DNS Servers . . . . . . . . . . . : 168.63.129.16
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+ stderr = .
+NetworkingDataLog Information: 1 : [00000001] 2022-09-26T16:50:45.594Z route.exe print
+ stdout = ===========================================================================
+Interface List
+  5...60 45 bd c7 7e b3 ......Microsoft Hyper-V Network Adapter
+  1...........................Software Loopback Interface 1
+===========================================================================
+IPv4 Route Table
+===========================================================================
+Active Routes:
+Network Destination        Netmask          Gateway       Interface  Metric
+          0.0.0.0          0.0.0.0         10.0.0.1         10.0.0.4      5
+         10.0.0.0    255.255.255.0         On-link          10.0.0.4    261
+         10.0.0.4  255.255.255.255         On-link          10.0.0.4    261
+       10.0.0.255  255.255.255.255         On-link          10.0.0.4    261
+        127.0.0.0        255.0.0.0         On-link         127.0.0.1    331
+        127.0.0.1  255.255.255.255         On-link         127.0.0.1    331
+  127.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+    168.63.129.16  255.255.255.255         10.0.0.1         10.0.0.4      6
+  169.254.169.254  255.255.255.255         10.0.0.1         10.0.0.4      6
+        224.0.0.0        240.0.0.0         On-link         127.0.0.1    331
+        224.0.0.0        240.0.0.0         On-link          10.0.0.4    261
+  255.255.255.255  255.255.255.255         On-link         127.0.0.1    331
+  255.255.255.255  255.255.255.255         On-link          10.0.0.4    261
+===========================================================================
+Persistent Routes:
+  None
+IPv6 Route Table
+===========================================================================
+Active Routes:
+ If Metric Network Destination      Gateway
+  1    331 ::1/128                  On-link
+  5    261 fe80::/64                On-link
+  5    261 fe80::4c5d:3dc0:23f4:23ff/128
+                                    On-link
+  1    331 ff00::/8                 On-link
+  5    261 ff00::/8                 On-link
+===========================================================================
+Persistent Routes:
+  None
+
+ stderr = .
+NetworkingDataLog Information: 1 : [00000001] 2022-09-26T16:50:47.969Z arp.exe /a
+ stdout = Interface: 10.0.0.4 --- 0x5
+  Internet Address      Physical Address      Type
+  10.0.0.1              12-34-56-78-9a-bc     dynamic   
+  10.0.0.255            ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+ stderr = .
+NetworkingDataLog Information: 1 : [00000001] 2022-09-26T16:50:56.311Z netstat.exe /a /b /o
+ stdout = Active Connections
+  Proto  Local Address          Foreign Address        State           PID
+  TCP    0.0.0.0:135            gagagava:0             LISTENING       948
+  RpcEptMapper
+ [svchost.exe]
+  TCP    0.0.0.0:445            gagagava:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    0.0.0.0:3389           gagagava:0             LISTENING       420
+  TermService
+ [svchost.exe]
+  TCP    0.0.0.0:5985           gagagava:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    0.0.0.0:47001          gagagava:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    0.0.0.0:49664          gagagava:0             LISTENING       744
+ [lsass.exe]
+  TCP    0.0.0.0:49665          gagagava:0             LISTENING       592
+ Can not obtain ownership information
+  TCP    0.0.0.0:49666          gagagava:0             LISTENING       1284
+  EventLog
+ [svchost.exe]
+  TCP    0.0.0.0:49667          gagagava:0             LISTENING       1832
+  Schedule
+ [svchost.exe]
+  TCP    0.0.0.0:49668          gagagava:0             LISTENING       2588
+  SessionEnv
+ [svchost.exe]
+  TCP    0.0.0.0:49669          gagagava:0             LISTENING       2728
+ [spoolsv.exe]
+  TCP    0.0.0.0:49671          gagagava:0             LISTENING       728
+ Can not obtain ownership information
+  TCP    10.0.0.4:139           gagagava:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    10.0.0.4:3389          178.206.133.20:45010   ESTABLISHED     420
+  TermService
+ [svchost.exe]
+  TCP    10.0.0.4:49679         72.21.91.29:http       TIME_WAIT       0
+  TCP    10.0.0.4:49767         52.180.66.122:https    TIME_WAIT       0
+  TCP    10.0.0.4:49794         a104-86-5-150:http     TIME_WAIT       0
+  TCP    10.0.0.4:49797         a104-86-5-150:http     TIME_WAIT       0
+  TCP    10.0.0.4:49799         13.107.4.50:http       TIME_WAIT       0
+  TCP    10.0.0.4:49801         20.189.173.9:https     TIME_WAIT       0
+  TCP    10.0.0.4:49804         72.21.91.29:http       ESTABLISHED     6280
+ [smartscreen.exe]
+  TCP    10.0.0.4:49814         40.124.168.44:https    TIME_WAIT       0
+  TCP    10.0.0.4:49821         13.107.42.16:https     ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49822         20.69.130.185:https    ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49823         a-0003:https           ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49826         a23-214-112-9:https    ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49828         a23-214-112-9:https    ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49829         a-0003:https           ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49830         server-99-84-192-27:https  ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49832         20.80.188.247:https    ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49833         a-0001:https           ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49834         a-0001:https           ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49835         server-99-84-194-4:http  ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49836         13.107.4.50:http       ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49839         a-0003:https           ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49840         13.107.42.14:https     ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49842         204.79.197.219:https   ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49843         204.79.197.219:https   ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49844         13.107.21.200:https    ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49845         13.107.21.200:https    ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49846         213:https              ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49847         a-0001:https           ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49848         104.18.20.226:http     ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49849         146.75.93.44:https     ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49851         server-54-230-21-36:https  ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49852         13.107.21.239:https    ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49853         20.189.173.9:https     ESTABLISHED     808
+ [msedge.exe]
+  TCP    10.0.0.4:49854         13.107.42.16:https     TIME_WAIT       0
+  TCP    10.0.0.4:49855         beap1:https            ESTABLISHED     808
+ [msedge.exe]
+  TCP    [::]:135               gagagava:0             LISTENING       948
+  RpcEptMapper
+ [svchost.exe]
+  TCP    [::]:445               gagagava:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    [::]:3389              gagagava:0             LISTENING       420
+  TermService
+ [svchost.exe]
+  TCP    [::]:5985              gagagava:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    [::]:47001             gagagava:0             LISTENING       4
+ Can not obtain ownership information
+  TCP    [::]:49664             gagagava:0             LISTENING       744
+ [lsass.exe]
+  TCP    [::]:49665             gagagava:0             LISTENING       592
+ Can not obtain ownership information
+  TCP    [::]:49666             gagagava:0             LISTENING       1284
+  EventLog
+ [svchost.exe]
+  TCP    [::]:49667             gagagava:0             LISTENING       1832
+  Schedule
+ [svchost.exe]
+  TCP    [::]:49668             gagagava:0             LISTENING       2588
+  SessionEnv
+ [svchost.exe]
+  TCP    [::]:49669             gagagava:0             LISTENING       2728
+ [spoolsv.exe]
+  TCP    [::]:49671             gagagava:0             LISTENING       728
+ Can not obtain ownership information
+  UDP    0.0.0.0:123            *:*                                    3008
+  W32Time
+ [svchost.exe]
+  UDP    0.0.0.0:3389           *:*                                    420
+  TermService
+ [svchost.exe]
+  UDP    0.0.0.0:5353           *:*                                    1804
+  Dnscache
+ [svchost.exe]
+  UDP    0.0.0.0:5353           *:*                                    7564
+ [msedge.exe]
+  UDP    0.0.0.0:5353           *:*                                    7564
+ [msedge.exe]
+  UDP    0.0.0.0:5355           *:*                                    1804
+  Dnscache
+ [svchost.exe]
+  UDP    10.0.0.4:137           *:*                                    4
+ Can not obtain ownership information
+  UDP    10.0.0.4:138           *:*                                    4
+ Can not obtain ownership information
+  UDP    127.0.0.1:49581        127.0.0.1:49581                        2856
+  iphlpsvc
+ [svchost.exe]
+  UDP    [::]:123               *:*                                    3008
+  W32Time
+ [svchost.exe]
+  UDP    [::]:3389              *:*                                    420
+  TermService
+ [svchost.exe]
+  UDP    [::]:5353              *:*                                    7564
+ [msedge.exe]
+  UDP    [::]:5353              *:*                                    1804
+  Dnscache
+ [svchost.exe]
+  UDP    [::]:5355              *:*                                    1804
+  Dnscache
+ [svchost.exe]
+
+ stderr = .
